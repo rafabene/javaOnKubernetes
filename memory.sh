@@ -1,14 +1,7 @@
 #!/bin/bash
 
-# Verifica se os parâmetros foram passados corretamente
-if [ "$#" -ne 2 ]; then
-    echo "Uso: $0 <NUM_CPUS> <MEMORIA>"
-    echo "Exemplo: $0 2 512m (para 2 CPUs e 512MB de memória)"
-    exit 1
-fi
-
-NUM_CPUS=$1
-MEMORY=$2
+NUM_CPUS=2
+MEMORY=100
 IMAGE="docker.io/library/openjdk:21"
 
 # Nome do contêiner
