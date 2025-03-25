@@ -1,7 +1,7 @@
 #!/bin/bash
 
 NUM_CPUS=2
-MEMORY=100
+MEMORY=100m
 IMAGE="docker.io/library/openjdk:21"
 
 # Nome do contêiner
