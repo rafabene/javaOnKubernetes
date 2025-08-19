@@ -11,6 +11,7 @@ CONTAINER_NAME="openjdk21_memory"
 podman run -it  \
     -v `pwd`:/java  -w /java \
     --cpus=$NUM_CPUS \
+    --cpuset-cpus=0-$((NUM_CPUS - 1)) \
     --memory=$MEMORY \
     --name $CONTAINER_NAME \
-    $IMAGE  java -XX:+PrintFlagsFinal -Xmx500m Main
+    $IMAGE  java -Xmx500m Main

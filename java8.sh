@@ -18,6 +18,7 @@ CONTAINER_NAME="openjdk8_podman"
 podman run -it --rm \
     -v `pwd`:/java  -w /java \
     --cpus=$NUM_CPUS \
+    --cpuset-cpus=0-$((NUM_CPUS - 1)) \
     --memory=$MEMORY \
     --name $CONTAINER_NAME \
     $IMAGE  java -XX:+PrintFlagsFinal Main info | grep -E 'Use.*GC\b|Processor|MaxHeapSize|MinHeapSize|Memory'

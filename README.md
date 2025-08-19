@@ -6,6 +6,14 @@ Este guia tem como objetivo demonstrar como o Java se comporta dentro de contain
 
 ## 1. Preparação para a Apresentação
 
+### Preparação do Ambiente
+
+Antes de iniciar os testes, prepare o ambiente Podman:
+
+```sh
+./prepare-env.sh
+```
+
 ### Compilação do Projeto
 
 Antes de iniciar os testes, compile o projeto:
@@ -89,6 +97,13 @@ jconsole& ; java -Xmx512m -XX:+UseZGC Main
 ---
 
 ## 5. Testando Diferentes Versões do Java em Containers
+
+### Java 25 - Execução sem problemas
+
+```sh
+./java25.sh 2 100m
+```
+
 
 ### Java 21 - Execução sem problemas
 

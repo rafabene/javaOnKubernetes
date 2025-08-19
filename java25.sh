@@ -9,7 +9,7 @@ fi
 
 NUM_CPUS=$1
 MEMORY=$2
-IMAGE="docker.io/library/openjdk:21"
+IMAGE="docker.io/library/openjdk:25"
 
 # Nome do contêiner
 CONTAINER_NAME="openjdk21_podman"
